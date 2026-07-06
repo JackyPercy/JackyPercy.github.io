@@ -1,0 +1,35 @@
+baseURL = "https://jackypercy.github.io/"
+languageCode = "zh-CN"
+title = "Jacky Percy"
+theme = "hugo-resume-master"
+
+[params]
+firstName = "Jacky"
+lastName = "Percy"
+address = "Wuhan, China"
+email = "your-email@example.com"
+profileImage = "img/profile.jpg"
+showContact = true
+showQr = false
+showBoards = false
+showCertifications = false
+showSocializations = true
+
+sections = [
+  "publications",
+  "education",
+  "experience",
+  "skills",
+  "blog"
+]
+
+[[params.handles]]
+name = "GitHub"
+link = "https://github.com/JackyPercy"
+icon = "github"
+
+[outputs]
+home = ["HTML", "JSON"]
+
+[taxonomies]
+tag = "tags"
