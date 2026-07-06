@@ -1,35 +1,105 @@
 baseURL = "https://jackypercy.github.io/"
 languageCode = "zh-CN"
 title = "Jacky Percy"
-theme = "hugo-resume-master"
+theme = "PaperMod"
+
+enableRobotsTXT = true
+
+[pagination]
+pagerSize = 10
 
 [params]
-firstName = "Jacky"
-lastName = "Percy"
-address = "Wuhan, China"
-email = "your-email@example.com"
-profileImage = "img/profile.jpg"
-showContact = true
-showQr = false
-showBoards = false
-showCertifications = false
-showSocializations = true
+env = "production"
+description = "Jacky Percy's personal website"
+author = "Jacky Percy"
 
-sections = [
-  "publications",
-  "education",
-  "experience",
-  "skills",
-  "blog"
-]
+defaultTheme = "auto"
+ShowReadingTime = true
+ShowShareButtons = false
+ShowPostNavLinks = true
+ShowBreadCrumbs = true
+ShowCodeCopyButtons = true
+ShowToc = true
+TocOpen = false
 
-[[params.handles]]
-name = "GitHub"
-link = "https://github.com/JackyPercy"
-icon = "github"
+[params.profileMode]
+enabled = true
+title = "Jacky Percy"
+subtitle = """Was wir wissen, ist ein Tropfen. Was wir nicht wissen, ist ein Ozean.<br>
+我们所知的只是沧海一粟，我们未知的却是汪洋大海。"""
+imageUrl = ""
+imageWidth = 160
+imageHeight = 160
+
+[[params.socialIcons]]
+name = "github"
+url = "https://github.com/JackyPercy"
+
+[[params.socialIcons]]
+name = "orcid"
+url = "https://orcid.org/0009-0006-2695-2140"
+
+[[params.socialIcons]]
+name = "researchgate"
+url = "https://www.researchgate.net/profile/Chaopei-Jiang"
+
+[[params.socialIcons]]
+name = "email"
+url = "mailto:j935342409@gmail.com"
+
+[[params.profileMode.buttons]]
+name = "Blogs"
+url = "/blogs/"
+
+[[params.profileMode.buttons]]
+name = "Publications"
+url = "/publications/"
+
+
+[[params.profileMode.buttons]]
+name = "About"
+url = "/about/"
+
+[[menu.main]]
+name = "Home"
+url = "/"
+weight = 1
+
+[[menu.main]]
+name = "Blogs"
+url = "/blogs/"
+weight = 2
+
+[[menu.main]]
+name = "Publications"
+url = "/publications/"
+weight = 3
+
+[[menu.main]]
+name = "Search"
+url = "/search/"
+weight = 4
+
+[[menu.main]]
+name = "About"
+url = "/about/"
+weight = 5
+
+
 
 [outputs]
-home = ["HTML", "JSON"]
+home = ["HTML", "RSS", "JSON"]
 
-[taxonomies]
-tag = "tags"
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+
+[params.fuseOpts]
+isCaseSensitive = false
+shouldSort = true
+location = 0
+distance = 1000
+threshold = 0.4
+minMatchCharLength = 1
+keys = ["title", "permalink", "summary", "content"]

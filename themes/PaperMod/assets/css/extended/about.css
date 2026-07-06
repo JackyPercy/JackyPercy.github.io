@@ -1,0 +1,161 @@
+/* ===============================
+   About page / CV style
+   =============================== */
+
+/* 页面整体宽一点，不然三列容易换行 */
+:root {
+  --main-width: 1050px;
+}
+
+/* 统一 PaperMod 页面标题大小 */
+.post-title {
+  font-size: 42px;
+  line-height: 1.2;
+  margin-bottom: 30px;
+}
+
+/* About 正文整体 */
+.about-cv {
+  font-size: 20px;
+  line-height: 1.55;
+}
+
+/* 顶部个人信息区：和下面 CV 三列使用同一套列宽 */
+.about-info {
+  display: grid;
+  grid-template-columns: 260px 1fr 180px;
+  column-gap: 36px;
+  row-gap: 14px;
+  margin-top: 32px;
+  margin-bottom: 42px;
+}
+
+.about-label {
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+/* 顶部信息的内容占据第 2、3 列 */
+.about-value {
+  grid-column: 2 / 4;
+  min-width: 0;
+}
+
+/* 分隔线 */
+.about-cv hr {
+  margin: 42px 0 36px;
+  border: none;
+  border-top: 1px solid #bbb;
+}
+
+.about-link-row {
+  display: block;
+}
+
+.about-link-row a {
+  color: #0000ee;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+  border-bottom: none;
+}
+
+.about-link-row a:hover {
+  color: #0000ee;
+  text-decoration: underline;
+  border-bottom: none;
+}
+
+/* Education / Research Experience / Publications 标题 */
+.about-cv h2 {
+  font-size: 42px;
+  line-height: 1.25;
+  margin-top: 0;
+  margin-bottom: 28px;
+  font-weight: 700;
+}
+
+/* 简历列表 */
+.cv-list {
+  margin-top: 10px;
+}
+
+/* 三列严格对齐：年份 / 主体 / 角色 */
+.cv-row {
+  display: grid;
+  grid-template-columns: 260px 1fr 180px;
+  column-gap: 36px;
+  align-items: start;
+  margin-bottom: 16px;
+}
+
+.cv-year {
+  white-space: nowrap;
+}
+
+.cv-main {
+  min-width: 0;
+}
+
+.cv-role {
+  white-space: nowrap;
+  text-align: left;
+}
+
+.cv-main strong {
+  font-weight: 700;
+}
+
+/* 尽量不让学校名那一列随便断行 */
+.cv-main {
+  overflow-wrap: normal;
+  word-break: normal;
+}
+
+
+/* 手机端单列显示 */
+@media (max-width: 800px) {
+  :root {
+    --main-width: 720px;
+  }
+
+  .post-title {
+    font-size: 34px;
+  }
+
+  .about-cv {
+    font-size: 18px;
+  }
+
+  .about-info {
+    grid-template-columns: 1fr;
+    row-gap: 4px;
+  }
+
+  .about-value {
+    grid-column: auto;
+  }
+
+  .about-label {
+    margin-top: 12px;
+  }
+
+  .about-cv h2 {
+    font-size: 34px;
+  }
+
+  .cv-row {
+    grid-template-columns: 1fr;
+    row-gap: 4px;
+    margin-bottom: 22px;
+  }
+
+  .cv-year {
+    font-weight: 700;
+  }
+
+  .cv-role {
+    color: #555;
+  }
+}
+

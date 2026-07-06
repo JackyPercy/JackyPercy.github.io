@@ -1,0 +1,75 @@
+/* ===============================
+   Publications page
+   =============================== */
+
+.pub-page {
+  font-size: 20px;
+  line-height: 1.55;
+}
+
+/* 页面第一个大标题，和 About Me 一致 */
+.post-title {
+  font-size: 42px;
+  line-height: 1.2;
+  margin-bottom: 30px;
+}
+
+/* 第二、第三个大标题，和第一个大标题统一 */
+.pub-section-title {
+  font-size: 42px;
+  line-height: 1.2;
+  margin-top: 55px;
+  margin-bottom: 30px;
+  font-weight: 700;
+}
+
+/* 论文列表 */
+.pub-list {
+  padding-left: 34px;
+  margin-top: 24px;
+  margin-bottom: 0;
+}
+
+.pub-list li {
+  margin-bottom: 18px;
+  line-height: 1.65;
+  text-align: justify;
+}
+
+.pub-list strong {
+  font-weight: 700;
+}
+
+.pub-list em {
+  font-style: italic;
+}
+
+.pub-list a {
+  color: #0000ee !important;
+  text-decoration: underline !important;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+  border-bottom: none !important;
+  box-shadow: none !important;
+}
+
+.pub-list a:hover {
+  color: #0000ee !important;
+  border-bottom: none !important;
+  box-shadow: none !important;
+}
+
+@media (max-width: 800px) {
+  .post-title,
+  .pub-section-title {
+    font-size: 34px;
+  }
+
+  .pub-page {
+    font-size: 18px;
+  }
+
+  .pub-list {
+    padding-left: 26px;
+  }
+}
