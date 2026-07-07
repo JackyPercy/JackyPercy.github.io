@@ -33,11 +33,14 @@
   align-items: center;
   flex-wrap: nowrap;
   gap: 16px;
+  margin-top: 22px;
 }
 
 .buttons a {
-  font-size: 20px;
-  padding: 10px 20px;
+  font-size: 18px;
+  padding: 8px 18px;
+  line-height: 1.25;
+  border-radius: 8px;
   white-space: nowrap;
 }
 
