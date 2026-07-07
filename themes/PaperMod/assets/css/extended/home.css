@@ -1,0 +1,69 @@
+/* ===============================
+   Home profile size
+   =============================== */
+
+/* 首页中间 Jacky Percy */
+.profile_inner h1 {
+  font-size: 52px;
+  line-height: 1.2;
+  margin-bottom: 18px;
+}
+
+/* 首页格言 */
+.profile_inner span {
+  font-size: 30px;
+  line-height: 1.6;
+}
+
+/* 首页社交图标 */
+.social-icons {
+  margin-top: 24px;
+  margin-bottom: 24px;
+}
+
+.social-icons a svg {
+  width: 34px;
+  height: 34px;
+}
+
+/* 首页按钮 */
+.buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  gap: 16px;
+}
+
+.buttons a {
+  font-size: 20px;
+  padding: 10px 20px;
+  white-space: nowrap;
+}
+
+
+/* 手机端 */
+@media (max-width: 800px) {
+  .profile_inner h1 {
+    font-size: 40px;
+  }
+
+  .profile_inner span {
+    font-size: 19px;
+  }
+
+  .social-icons a svg {
+    width: 30px;
+    height: 30px;
+  }
+
+  .buttons {
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  .buttons a {
+    font-size: 18px;
+    padding: 9px 16px;
+  }
+}
