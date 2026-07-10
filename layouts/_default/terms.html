@@ -1,0 +1,44 @@
+{{ define "main" }}
+
+<article class="post-single tags-page-custom">
+
+  <header class="post-header">
+    {{ if .Params.ShowBreadCrumbs }}
+    {{ partial "breadcrumbs.html" . }}
+    {{ end }}
+
+    <h1 class="post-title">{{ .Title }}</h1>
+  </header>
+
+  <div class="tags-description">
+    通过关键词快速定位和发现相关内容。
+  </div>
+
+  {{ $terms := .Data.Terms.ByCount }}
+
+  {{ if $terms }}
+
+  <div class="tag-card">
+    <h2 class="tag-card-title">All Tags</h2>
+
+    <div class="tag-cloud">
+      {{ range $terms }}
+      <a class="tag-chip" href="{{ .Page.RelPermalink }}">
+        <span class="tag-name">{{ .Page.Title }}</span>
+        <span class="tag-count">{{ .Count }}</span>
+      </a>
+      {{ end }}
+    </div>
+  </div>
+
+  {{ else }}
+
+  <p class="no-tags">
+    还没有标签。请先在 blog 文件的 front matter 里添加 <code>tags</code>。
+  </p>
+
+  {{ end }}
+
+</article>
+
+{{ end }}
