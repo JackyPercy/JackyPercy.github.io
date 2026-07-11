@@ -3,9 +3,9 @@
 <article class="post-single tags-page-custom">
 
   <header class="post-header">
-    {{ if .Params.ShowBreadCrumbs }}
+    {{- if (.Param "ShowBreadCrumbs") }}
     {{ partial "breadcrumbs.html" . }}
-    {{ end }}
+    {{- end }}
 
     <h1 class="post-title">{{ .Title }}</h1>
   </header>
